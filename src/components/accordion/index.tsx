@@ -50,7 +50,7 @@ function CustomAccordion() {
         <div style={{display: 'flex', alignItems: 'center'}}>
           <Checkbox id="enable-multi-select" onCheckedChange={(event) => setAllowMultiSelect(event)} />
           <label htmlFor="enable-multi-select">
-            <span className="ml-2 text-sm font-bold ">Enable Multi Select</span>
+            <span className="ml-2 text-sm font-bold">Enable Multi Select</span>
           </label>
         </div>
         {/* Collapse all and Expand All*/}
@@ -67,7 +67,7 @@ function CustomAccordion() {
         data.map((item) => {
           return (
             <div key={item.id} className="item-wrapper">
-              <div className="item-title">
+              <div className="item-title font-bold">
                 <span>{item.title}</span>
                 <span
                   onClick={() =>

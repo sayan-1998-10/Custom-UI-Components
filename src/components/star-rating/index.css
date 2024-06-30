@@ -1,0 +1,11 @@
+.star-rating-rated {
+  path {
+    fill: #facc15;
+  }
+}
+
+.star-rating-default {
+  path {
+    fill: #e2e8f0;
+  }
+}
