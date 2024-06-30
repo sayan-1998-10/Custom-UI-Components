@@ -4,7 +4,6 @@ import "./index.css";
 import {
   Card,
   CardContent,
-  CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
@@ -17,22 +16,26 @@ function StarRating(props) {
   const numberOfStars: number = props.numberOfStars;
   const tempArray = [];
 
+  // Create an index for every star from 0 ... numberOfStars - 1
   if (numberOfStars > 0) {
     for (let i = 0; i < numberOfStars; i++) {
       tempArray.push(i);
     }
   }
 
+  // On hover   
   function highlightStars(hoveredStar: number) {
     setIsHover(true);
     setCurrentHoveredStar(hoveredStar);
   }
 
+  // On select
   function onSelectStar(selectedStar: number) {
     setIsHover(false);
     setClickedStar(selectedStar);
   }
 
+  // Get the styling class
   function getClassNameOnStarRating(id: number) {
     if (isHover && currentHoveredStar !== -1) {
       return id <= currentHoveredStar
